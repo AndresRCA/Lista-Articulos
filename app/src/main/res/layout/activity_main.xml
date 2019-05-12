@@ -26,4 +26,9 @@
         android:layout_marginBottom="10dp"
         android:onClick="startItemActivity"
         android:text="@string/add_button" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="add"
+        android:text="add" />
 </LinearLayout>

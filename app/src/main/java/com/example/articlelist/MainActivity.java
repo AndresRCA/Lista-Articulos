@@ -11,32 +11,20 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView articleList;
+    ListView article_list;
     ArrayList<String> articles = new ArrayList<>();
+    ArrayAdapter<String> article_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        articles.add("uno");
-        articles.add("dos");
-        articles.add("uno");
-        articles.add("dos");
-        articles.add("uno");
-        articles.add("dos");
-        articles.add("uno");
-        articles.add("dos");
-        articles.add("uno");
-        articles.add("dos");
-        articles.add("uno");
-        articles.add("dos");
-        articles.add("uno");
-        articles.add("dos");
-        articles.add("uno");
-        articles.add("dos");
+        if(savedInstanceState != null) { // articles queda vacio cuando cierra la aplicacion con back
+            articles = savedInstanceState.getStringArrayList("articles");
+        }
         setContentView(R.layout.activity_main);
-        articleList = findViewById(R.id.articleList);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, articles);
-        articleList.setAdapter(adapter);
+        article_list = findViewById(R.id.articleList);
+        article_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, articles);
+        article_list.setAdapter(article_adapter);
     }
 
     /**
@@ -46,5 +34,18 @@ public class MainActivity extends AppCompatActivity {
     public void startItemActivity(View view) {
         Intent intent = new Intent(this, Articles.class);
         startActivity(intent);
+    }
+
+    public void add(View view) {
+        articles.add("tres");
+        article_adapter.notifyDataSetChanged();
+        // otra forma de agregar
+        //article_adapter.add("tres");
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putStringArrayList("articles", articles);
     }
 }
