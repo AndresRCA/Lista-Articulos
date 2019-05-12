@@ -25,6 +25,19 @@ public class MainActivity extends AppCompatActivity {
         article_list = findViewById(R.id.articleList);
         article_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, articles);
         article_list.setAdapter(article_adapter);
+        Intent intent = getIntent();
+        if(intent.getType() != null) { // https://developer.android.com/training/sharing/receive#java
+            addArticle(intent.getStringExtra(Articles.EXTRA_ARTICLE));
+        }
+    }
+
+    /**
+     * meotodo que agrega un articlo y actualiza la lista
+     * @param article es el string del articulo
+     */
+    private void addArticle(String article) {
+        articles.add(article);
+        article_adapter.notifyDataSetChanged();
     }
 
     /**
