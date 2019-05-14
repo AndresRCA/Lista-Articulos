@@ -25,14 +25,19 @@ public class MainActivity extends AppCompatActivity {
         article_list = findViewById(R.id.articleList);
         article_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, articles);
         article_list.setAdapter(article_adapter);
-        Intent intent = getIntent();
-        if(intent.getType() != null) { // https://developer.android.com/training/sharing/receive#java
-            addArticle(intent.getStringExtra(Articles.EXTRA_ARTICLE));
-        }
+    }
+
+    @Override
+    protected void onActivityResult(int request_code, int result_code, Intent data) {
+    	if(request_code == 1) {
+    		if(result_code == Activity.RESULT_OK) {
+    			addArticle(data.getStringExtra(Articles.EXTRA_ARTICLE));
+    		}
+    	}
     }
 
     /**
-     * meotodo que agrega un articlo y actualiza la lista
+     * metodo que agrega un articlo y actualiza la lista
      * @param article es el string del articulo
      */
     private void addArticle(String article) {
@@ -41,12 +46,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * metodo que inicia la actividad que contiene la lista de articulos a agregar
+     * metodo que inicia la actividad que contiene la lista de articulos a agregar y espera el resultado
      * @param view
      */
     public void startItemActivity(View view) {
         Intent intent = new Intent(this, Articles.class);
-        startActivity(intent);
+        startActivityForResult(intent, 1); // request_code = 1
     }
 
     public void add(View view) {
