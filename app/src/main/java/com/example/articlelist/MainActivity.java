@@ -54,13 +54,6 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 1); // request_code = 1
     }
 
-    public void add(View view) {
-        articles.add("tres");
-        article_adapter.notifyDataSetChanged();
-        // otra forma de agregar
-        //article_adapter.add("tres");
-    }
-
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
