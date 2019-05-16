@@ -1,4 +1,4 @@
-package android.example.articlelist1;
+package com.example.articlelist;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SecondActivity extends AppCompatActivity {
+public class Articles extends AppCompatActivity {
 
     //TextViews correspondientes a los articulos
     public static final String EXTRA_MESSAGE = "android.example.articlelist1.extra.MESSAGE";
@@ -32,14 +32,14 @@ public class SecondActivity extends AppCompatActivity {
     private TextView mac;
     private TextView asu;
 
-    public SecondActivity() {
+    public Articles() {
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_articles);
 
         iph = (TextView) findViewById(R.id.iphone);
         air = (TextView) findViewById(R.id.airpods);
@@ -65,7 +65,7 @@ public class SecondActivity extends AppCompatActivity {
 
     //Metodo de seleccion para cada articulo. Pasa a la actividad principal y lo muestra
     public void compraIph(View view) {
-        Toast.makeText(SecondActivity.this, "Articulo Agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this, "Articulo Agregado", Toast.LENGTH_SHORT).show();
         String addart1 = iph.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart1);
@@ -74,7 +74,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraAir(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart2 = air.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart2);
@@ -83,7 +83,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraIpCh(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart3 = iphchar.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart3);
@@ -92,7 +92,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraAw(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart4 = appwat.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart4);
@@ -101,7 +101,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraS10(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart5 = s10.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart5);
@@ -110,7 +110,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraCar(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart6 = cargarsam.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart6);
@@ -119,7 +119,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraWir(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart7 = wirlesssam.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart7);
@@ -128,7 +128,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraPs4(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart8 = ps4.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart8);
@@ -137,7 +137,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraConps4(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart9 = conps4.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart9);
@@ -146,7 +146,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraXbox(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart10 = xbox.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart10);
@@ -155,7 +155,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraConXb(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart11 = conxbox.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart11);
@@ -164,7 +164,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraTv(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart12 = tv.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart12);
@@ -173,7 +173,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraCor(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart13 = jbl.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart13);
@@ -182,7 +182,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraLap(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart14 = lap.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart14);
@@ -191,7 +191,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraGar(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart15 = gar.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart15);
@@ -200,7 +200,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraHua(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart16 = hua.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart16);
@@ -209,7 +209,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraTar(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart17 = tar.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart17);
@@ -218,7 +218,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraGo(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart18 = gop.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart18);
@@ -227,7 +227,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraMac(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart19 = mac.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart19);
@@ -236,7 +236,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void compraAsus(View view) {
-        Toast.makeText(SecondActivity.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Articles.this,   "Artículo agregado", Toast.LENGTH_SHORT).show();
         String addart20 = asu.getText().toString();
         Intent addintent = new Intent();
         addintent.putExtra(EXTRA_MESSAGE,addart20);
