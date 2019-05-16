@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">Article List</string>
     <string name="add_button">+</string>
+
+    <string name="iphone">Iphone XS Max</string>
+    <string name="airpods">AirPods</string>
+    <string name="ciphone">Cargador para Iphone</string>
+    <string name="apwatch">AppleWatch</string>
+    <string name="samsung">Samsung S10 Plus</string>
+    <string name="csamsung">Cargador para Samsung</string>
+    <string name="wcargador">Cargador Inalambrico</string>
+    <string name="ps4">PS4 Pro</string>
+    <string name="cps4">Control para PS4</string>
+    <string name="xbox">Xbox One</string>
+    <string name="cxbox">Control para Xbox</string>
+    <string name="tv">Curve UHD TV</string>
+    <string name="corneta">Corneta JBL Flip</string>
+    <string name="laptop">Laptop HP</string>
+    <string name="garmin">Garmin Serie Fenix</string>
+    <string name="huawei">Huawei P30 Pro</string>
+    <string name="tarjeta">Tarjeta de Video</string>
+    <string name="gopro">GoPro Hero 5</string>
+    <string name="macbook">MacBook Pro</string>
+    <string name="asus">Asus ZenBook</string>
 </resources>

@@ -1,9 +1,662 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Articles">
 
-</android.support.constraint.ConstraintLayout>
+    //Se utiliza ScrollView para poder vizualizar los 20 articulos
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        //Creacion de botones y de las vistas de texto para elegir los articulos
+        <Button
+            android:id="@+id/button_second"
+            android:contentDescription="@string/iphone"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/iphonexsmax"
+            android:onClick="compraArticulo"
+            app:layout_constraintBottom_toTopOf="@+id/button_second2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/iphone"
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/iphone"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/button_second2"
+            android:contentDescription="@string/airpods"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="164dp"
+            android:background="@drawable/airpods"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/airpods"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="164dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/airpods"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second2"/>
+
+        <Button
+            android:id="@+id/button_second3"
+            android:contentDescription="@string/ciphone"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="312dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/iphonecharger"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cargador_iphone"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="312dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/ciphone"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second4"
+            android:contentDescription="@string/apwatch"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="460dp"
+            android:background="@drawable/applewatch"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/apple_watch"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="460dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/apwatch"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second5"
+            android:contentDescription="@string/samsung"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="608dp"
+            android:background="@drawable/s10"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/S10"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="608dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/samsung"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second6"
+            android:contentDescription="@string/csamsung"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="756dp"
+            android:background="@drawable/cargadorsamsung"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cargador_samsung"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="756dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/csamsung"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second7"
+            android:contentDescription="@string/wcargador"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="904dp"
+            android:background="@drawable/wirelesscharger"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wirelesscargador"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="904dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/wcargador"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second7"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button_second8"
+            android:contentDescription="@string/ps4"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1052dp"
+            android:background="@drawable/ps4"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ps4"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1052dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/ps4"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second9"
+            android:contentDescription="@string/cps4"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1200dp"
+            android:background="@drawable/controlps4"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/controlps4"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1200dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/cps4"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second10"
+            android:contentDescription="@string/xbox"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1348dp"
+            android:background="@drawable/xbox"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/xbox"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1348dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/xbox"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second11"
+            android:contentDescription="@string/cxbox"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1496dp"
+            android:background="@drawable/controlxboxone"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/controlxbox"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1496dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/cxbox"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second11"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second12"
+            android:contentDescription="@string/tv"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1644dp"
+            android:background="@drawable/tv"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1644dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/tv"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second12"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second13"
+            android:contentDescription="@string/corneta"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1792dp"
+            android:background="@drawable/corneta"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/corneta"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1792dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/corneta"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second13"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second14"
+            android:contentDescription="@string/laptop"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1940dp"
+            android:background="@drawable/laptop"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/laptop"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1940dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/laptop"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second14"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second15"
+            android:contentDescription="@string/garmin"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2088dp"
+            android:background="@drawable/garminfenix"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/garmin"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2088dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/garmin"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second15"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second16"
+            android:contentDescription="@string/huawei"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2236dp"
+            android:background="@drawable/huawei"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/huawei"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2236dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/huawei"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second16"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second17"
+            android:contentDescription="@string/tarjeta"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2384dp"
+            android:background="@drawable/tarjeta"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tarjeta"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2384dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/tarjeta"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second17"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second18"
+            android:contentDescription="@string/gopro"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2532dp"
+            android:background="@drawable/gopro"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gopro"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2532dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/gopro"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second19"
+            android:contentDescription="@string/macbook"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2680dp"
+            android:background="@drawable/macbook"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/macbook"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2680dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/macbook"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second19"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_second20"
+            android:contentDescription="@string/asus"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2828dp"
+            android:background="@drawable/asus"
+            android:onClick="compraArticulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/asus"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2828dp"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/asus"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_second20"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
